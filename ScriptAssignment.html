@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Script Assignment</title>
+  <style>
+    body{
+      background-color: blue;
+    }
+    label{
+      color: white;
+      margin-right: 29px;
+      text-align: center;
+    }
+    p{
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <label> Options:
+      <select id="dd" onchange="pri()">
+        <option value="HI" style="background-color: green;">HI</option>
+        <option value="ABC" style="background-color: white;">ABC</option>
+        <option value="DEF" style="background-color: red;">DEF</option>
+        <option value="GHI" style="background-color: yellow;">GHI</option>
+      </select>
+    </label>
+    
+  </form>
+  <p id="text"></p>
+  <button onclick="cleartext()">clear</button>
+  <script>
+    function pri()
+    {
+      document.getElementById("text").innerHTML=document.getElementById("text").innerHTML+"The Selected Menu is :"+document.getElementById("dd").value+"<br>";
+    }
+    function cleartext(){
+      document.getElementById("text").innerHTML="";
+    }
+  </script>
+</body>
+</html>
